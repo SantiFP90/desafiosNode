@@ -1,0 +1,1 @@
+[{"title":"xd probando","description":"ojala ande","price":99,"img":"no img","code":"lol12","stock":9,"id":2},{"id":1,"title":"producto prueba","description":"este es un producto de prueba","price":200,"img":"sinimagen.jpg","code":"abc123","stock":25}]

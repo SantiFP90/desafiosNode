@@ -46,28 +46,28 @@ class ProductManager {
   }
 }
 
-const manager = new ProductManager();
+// const manager = new ProductManager();
 
-manager.addProduct(
-  "producto prueba",
-  "este es un producto de prueba",
-  200,
-  "sinimagen.jpg",
-  "abc123",
-  25
-);
+// manager.addProduct(
+//   "producto prueba",
+//   "este es un producto de prueba",
+//   200,
+//   "sinimagen.jpg",
+//   "abc123",
+//   25
+// );
 
-const products = manager.getProducts();
-console.log("Array con el producto");
-console.log(products);
+// const products = manager.getProducts();
+// console.log("Array con el producto");
+// console.log(products);
 
-const product1 = manager.getProductById(1);
-console.log("Producto x Id");
-console.log(product1);
+// const product1 = manager.getProductById(1);
+// console.log("Producto x Id");
+// console.log(product1);
 
-console.log("Get de productos");
-console.log(manager.getProducts());
+// console.log("Get de productos");
+// console.log(manager.getProducts());
 
-manager.addProduct("SE AGREGOO??", "descrip", 20, "sinimg", "abc123", 25);
-console.log("Ver si se agrego el de codigo repetido");
-console.log(manager.getProducts());
+// manager.addProduct("SE AGREGOO??", "descrip", 20, "sinimg", "abc123", 25);
+// console.log("Ver si se agrego el de codigo repetido");
+// console.log(manager.getProducts());
