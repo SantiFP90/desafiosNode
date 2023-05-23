@@ -1,4 +1,3 @@
-const { log } = require("console");
 const fs = require("fs");
 
 class ProductManager {
@@ -65,10 +64,20 @@ class ProductManager {
     await this.readProductos();
     const product = this.products.find((p) => p.id === id);
     if (product) {
-      console.log(product);
       return product;
     } else {
       return "No existe un producto con el ID: " + id;
+    }
+  }
+
+  async getProductByCode(code) {
+    await this.readProductos();
+    const product = this.products.find((p) => p.code === code);
+    if (product) {
+      console.log(product);
+      return product;
+    } else {
+      return "No existe un producto con el code: " + code;
     }
   }
 
@@ -115,26 +124,36 @@ class ProductManager {
   }
 }
 
-const path = "./prueba.txt";
-const manager = new ProductManager(path);
+module.exports = ProductManager;
+
+// const path = "./prueba.txt";
+// const manager = new ProductManager(path);
+// manager.getProductByCode("abc22123125425424");
 // manager.addProduct(
-//   "producto prueba",
-//   "este es un producto de prueba",
-//   200,
+//   "producto prueba definitivo",
+//   "este es un producto de prueba definitivo",
+//   999,
 //   "sinimagen.jpg",
-//   "abc123",
-//   25
+//   "abc22123125425424",
+//   3
 // );
 // manager.addProduct(
-//   "Segundo producto prueba",
-//   "este es un producto de prueba 2",
-//   210,
+//   "Tercero producto prueba",
+//   "este es un producto de prueba 3",
+//   2210,
 //   "sinimagen.jpg",
-//   "abc123567",
+//   "abc123123123567",
 //   29
 // );
 
-// manager.getProducts();
-// manager.getProductById(2);
-// manager.deleteProduct(1);
-// manager.updateProduct(2, "xd probando", "ojala ande", 99, "no img", "lol12", 9);
+// // manager.getProducts();
+// manager.deleteProduct(2);
+// manager.updateProduct(
+//   2,
+//   "xd probando para el seba",
+//   "ojala ande",
+//   99,
+//   "no img",
+//   "lol12",
+//   9
+// );
